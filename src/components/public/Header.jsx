@@ -67,14 +67,15 @@ function DrawerAppBar(props) {
 			<AppBar component='nav'>
 				<Container>
 					<Toolbar>
-						<IconButton
-							color='inherit'
+						<IconButton 
+
+							color='#000'
 							aria-label='open drawer'
 							edge='start'
 							onClick={handleDrawerToggle}
 							sx={{ mr: 2, display: { sm: 'none' } }}
 						>
-							{/* <HomeIcon /> */}
+							 <MenuIcon />
 						</IconButton>
 
 						<Typography
@@ -93,16 +94,14 @@ function DrawerAppBar(props) {
 							</a>
 						</Typography>
 						<Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-							{navItems.map(item => (
-								<Button variant='contained' key={item} sx={{ color: '#fff000' }}>
+							{navItems.map((item) => (
 									<Link
-										className='text-[#fff] '
-										to={item.link}
-									>
+										className='text-[#000] mx-[10px]'
+										to={item.link}>
 										{item.text}
 										
 									</Link>
-								</Button>
+								
 							))}
 						</Box>
 
